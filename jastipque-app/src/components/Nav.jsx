@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/For-Navbar.png";
+import { useHistory } from "react-router-dom";
 
 export default function Nav() {
+  const history = useHistory();
   const handleLogout = () => {
     localStorage.removeItem("access_token");
+    localStorage.removeItem("username");
+    history.push('/')
     window.location.reload();
   };
 

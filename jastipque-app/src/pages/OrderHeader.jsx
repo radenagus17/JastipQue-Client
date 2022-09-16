@@ -31,7 +31,6 @@ export default function OrderHeader(props) {
   const handleOrderHeader = (e) => {
     e.preventDefault();
     dispatch(postOrderHeader(OrderHeader)).then((res) => {
-      console.log(res);
       window.snap.pay(res.transactionToken);
     });
   };

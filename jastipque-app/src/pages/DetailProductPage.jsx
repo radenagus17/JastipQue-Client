@@ -245,12 +245,20 @@ export default function DetailProducts(props) {
                       </div>
                     </div>
                     <div className="job-detail border rounded mt-4">
+                      {localStorage.getItem('access_token') ?
                       <button
                         className="btn btn-primary btn-block"
-                        // onClick={() => handleOrder}
                       >
                         Buy Products
                       </button>
+                      :
+                      <button 
+                        disabled
+                        className="btn btn-primary btn-block"
+                      >
+                        Buy Products
+                      </button>
+                    }
                     </div>
                   </form>
                 </div>

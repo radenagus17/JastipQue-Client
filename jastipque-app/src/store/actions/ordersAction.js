@@ -30,7 +30,7 @@ export function postOrder(data) {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        MySwal.fire("Saved!", "user Created", "success");
+        MySwal.fire("Saved!", "Product Created", "success");
       })
       .catch((err) => {
         console.log(err);
